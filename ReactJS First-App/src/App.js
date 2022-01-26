@@ -3,9 +3,9 @@ import './App.css';
 import Greetings, { Hello } from './components/Greetings';
 import Button, { Input } from './components/Button'
 import { Counter } from './components/Counter';
-import { Form } from './components/form-data';
-import { EmployeeList } from './components/Employee-Example';
-import { EmployeeCurd, EmployeeUpdate } from './components/Employee-Curd';
+import { Form } from './components/FormData';
+import { EmployeeList } from './components/EmployeeEx';
+import { EmployeeCurd, EmployeeUpdate } from './components/EmployeeCRUD';
 import {Route,Link,Routes} from 'react-router-dom'
 
 
@@ -20,7 +20,7 @@ function Navigation(){
 
 function App() {
   let message='Hello Every one';
-  let profile={name:'alex',age:30,dob:new Date(1994,7,10)};
+  let profile={name:'Subba Reddy',age:23,dob:new Date(1998,6,13)};
   return (
     <div>
       <h1> React Js </h1>
@@ -30,7 +30,7 @@ function App() {
               <div>
                  <Routes>
                   
-                     <Route path='/store' element={<EmployeeCurd/>}></Route>
+                     <Route path='/store' element={<EmployeeCRUD/>}></Route>
                      <Route path='/fetchAll' element={<EmployeeList/>}></Route>
                      <Route path='/update' element={<EmployeeUpdate/>}></Route>
                  </Routes>
